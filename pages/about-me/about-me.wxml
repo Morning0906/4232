@@ -1,0 +1,7 @@
+<view class="content-box" style="height:{{canUseHeight + 'px'}}">
+  <view class="content-box-item">
+    <image src="/image/luzejie.jpg" class="img01"></image>
+    <image src="/image/zhaocuiyu.jpg" class="img02"></image>
+  </view>
+
+</view>

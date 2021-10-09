@@ -1,0 +1,32 @@
+<!--index.wxml-->
+
+<!--倒数日记录页面的显示属性设置-->
+<view class="container">
+  <view class="title">
+    <view class="year">{{calendar.year}}年</view>
+    <view class="neweventbutton" bindtap="addEvent">+</view>
+  </view>
+  <canvas catchtouchstart="touchStart" catchtouchend="touchEnd" catchtouchmove="touchMove" catchtouchcancel="touchCancel"  canvas-id="calendar" class="calendar" style="height:{{canvasHeight}}px" />
+  <view wx:if="{{eventList.length <= 0}}">
+      <view>
+        <view class="nodata">
+        <text>你日历上还没有倒计时。 \r\n去创建一个吧。</text></view>
+      </view>
+  </view>
+  <view class="weui-panel">
+    <block wx:for-items="{{ eventList }}" wx:key="{{item.date}}">
+      <navigator url="/pages/event/event?{{item.urlParams}}" class="weui-media-box weui-media-box_appmsg" hover-class="weui-cell_active">
+        <view class="event">
+          <view class="date">{{item.date}}</view> 
+          <view class="name">{{item.name}}</view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+
+<!--倒数日记录页面的新增倒计时按钮的属性设置-->
+  <view class="buttons">
+        <button type="default" size="default" 
+        bindtap="addEvent" hover-class="other-button-hover"> + 新增倒计时 </button>
+  </view>
+</view>

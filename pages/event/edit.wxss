@@ -1,0 +1,8 @@
+.buttons {padding-top:100rpx;margin: 0rpx 40rpx 0rpx 10rpx;}
+.placeholder{
+  /*color:#ffcc33; */
+text-align:left; }
+.weui-input{width:100%;}
+.weui-cell_input picker{width:100%;}
+.weui-cells__title{color:#778899; font-size: 50rpx}
+.weui-input placeholder{font-size: 20rpx}
